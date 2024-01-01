@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Medical Condition Selection Boxes</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="header">
+        <a href="user-info-focus-part5.html"><img src="img/arrow_back.png" alt="Previous Page"></a>
+
+       
+         
+      </div>
+
+  <div class="Page">
+    <h1>Any medical condition we should be aware of?</h1>
+ 
+    <div class="box" onclick="toggleCheck(this)">
+      <span class="checkmark-page"><img src="img/check.png" alt=""></span>
+      <h2>Heart Conditions</h2>
+     
+    </div>
+
+    <div class="box" onclick="toggleCheck(this)">
+      <span class="checkmark-page"><img src="img/check.png" alt=""></span>
+      <h2>High Blood Pressure</h2>
+      
+    </div>
+
+    <div class="box" onclick="toggleCheck(this)">
+      <span class="checkmark-page"><img src="img/check.png" alt=""></span>
+      <h2>Diabetes</h2>
+      
+    </div>
+
+    <div class="box" onclick="toggleCheck(this)">
+      <span class="checkmark-page"><img src="img/check.png" alt=""></span>
+      <h2>Joint Issues</h2>
+      
+    </div>
+
+    <div class="box" onclick="toggleCheck(this)">
+        <span class="checkmark-page"><img src="img/check.png" alt=""></span>
+        <h2>Previous Injuries </h2>
+        
+      </div>
+  
+  </div>
+
+  <div class="next-page">
+    <button onclick="goToTime()">Next</button>
+  </div>
+
+
+<!-- _____________________________________JS______________________________________ -->
+
+<script >
+
+
+  function toggleCheck(element) {
+    const isSelected = element.classList.contains('selected');
+  
+    const boxes = document.querySelectorAll('.box');
+    boxes.forEach(box => box.classList.remove('selected'));
+  
+    if (!isSelected) {
+      element.classList.add('selected');
+    }
+  }
+  
+  function goToTime() {
+    const selectedBox = document.querySelector('.box.selected');
+    if (selectedBox) {
+      const boxTitle = selectedBox.querySelector('h2').innerText;
+  
+      console.log(`Selected Box: ${boxTitle}`);
+  
+      window.location.href = 'user-info-time-selection7.html';
+  
+    
+    } else {
+      console.log('Please select a box.');
+     
+    }
+  }
+  
+  
+    </script>
+  
+  
+  
+
+
+</body>
+</html>

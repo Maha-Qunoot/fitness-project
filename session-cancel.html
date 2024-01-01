@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cancel Session</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <a href="profile.html"><img src="img/arrow_back.png" alt="Previous Page"></a>
+        <div class="Preference">
+             <h1>Cancel Session</h1>
+          </div>
+      </div>
+      <p class="paragraph">Please select reason for session cancellation</p>
+      <div class="container-cancel">
+        <form class="cancellation-reason">
+          <div class="radio"><input type="radio" name="reason"> <label>Illness And injury</label></div>
+          <div class="radio"><input type="radio" name="reason"> <label>Scheduling Conflict</label></div>
+          <div class="radio"><input type="radio" name="reason"> <label>Travel Plan</label></div>
+          <div class="radio"><input type="radio" name="reason"> <label>Family Commitments</label></div>
+          <div class="radio"><input type="radio" name="reason"> <label>Other</label></div>
+        </form>
+      
+        <h4>other</h4>
+        <textarea cols="10" rows="10" placeholder="Enter Your Reason"></textarea>
+      </div>
+      
+      <div class="next-page">
+        <button onclick="GoToBooked()">Cancel</button>
+      </div>
+
+      <script src="script.js"></script>
+</body>
+</html>

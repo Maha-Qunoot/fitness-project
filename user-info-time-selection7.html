@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Time Selection Boxes</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="header">
+        <a href="user-info-medical-condition6.html"><img src="img/arrow_back.png" alt="Previous Page"></a>
+        <img src="img/alarm.png" alt="Previous Page">
+
+       
+      </div>
+
+  <div class="Page">
+    <h1>Pick day and time for training </h1>
+
+    <div class="box" onclick="toggleCheck(this)">
+      <span class="checkmark-page"><img src="img/check.png" alt=""></span>
+      <h2>Monday</h2>
+     
+    </div>
+
+    <div class="box" onclick="toggleCheck(this)">
+      <span class="checkmark-page"><img src="img/check.png" alt=""></span>
+      <h2>Tuesday</h2>
+      
+    </div>
+
+    <div class="box" onclick="toggleCheck(this)">
+      <span class="checkmark-page"><img src="img/check.png" alt=""></span>
+      <h2>Wednesday</h2>
+      
+    </div>
+
+    <div class="box" onclick="toggleCheck(this)">
+      <span class="checkmark-page"><img src="img/check.png" alt=""></span>
+      <h2>Thursday</h2>
+      
+    </div>
+
+    <div class="box" onclick="toggleCheck(this)">
+      <span class="checkmark-page"><img src="img/check.png" alt=""></span>
+      <h2>Friday</h2>
+      
+    </div>
+
+    <div class="box" onclick="toggleCheck(this)">
+      <span class="checkmark-page"><img src="img/check.png" alt=""></span>
+      <h2>Saturday</h2>
+      
+    </div>
+
+    <div class="box" onclick="toggleCheck(this)">
+      <span class="checkmark-page"><img src="img/check.png" alt=""></span>
+      <h2>Sunday</h2>
+      
+    </div>
+
+
+  
+      <input type="time" id="timeField" placeholder="Enter time (HH:MM)" class="time-input">
+    
+  </div>
+
+
+  
+
+
+
+
+  <div class="next-page">
+    <button onclick="goToRecommandPage()">Complete</button>
+  </div>
+
+
+  <script src="script.js"></script>
+
+<!-- _____________________________________JS______________________________________ -->
+
+
+ 
+ <script>
+  function toggleCheck(element) {
+    element.classList.toggle('selected');
+  }
+  
+  function goToRecommandPlan() {
+    const selectedBoxes = document.querySelectorAll('.box.selected');
+  
+    if (selectedBoxes.length > 0) {
+      selectedBoxes.forEach(selectedBox => {
+        const boxTitle = selectedBox.querySelector('h2').innerText;
+        console.log(`Selected Box: ${boxTitle}`);
+      });
+  
+      window.location.href = 'Recommand-Plan.html';
+    } else {
+      console.log('Please select at least one box.');
+    }
+  }
+  </script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

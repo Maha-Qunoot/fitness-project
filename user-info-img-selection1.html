@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Selection</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="header">
+    <a href="index.html"><img src="img/arrow_back.png" alt="Previous Page"></a>
+<!--     
+     <img src="img/icon.png" alt="" class="icon"> -->
+  
+  </div>
+
+  <div class="content">
+
+
+
+    <h1>Hello User! What bring you to this fitness coaching service app</h1>
+
+    <div class="images">
+      <div class="image-item" onclick="toggleCheck(this)">
+        <img src="img/yoga.png" alt="Image 1">
+        <span class="checkmark"><img src="img/check.png" alt=""></span>
+        <h2>Yoga</h2>
+        
+      </div>
+
+      <div class="image-item" onclick="toggleCheck(this)">
+        <img src="img/diet.png" alt="Image 1">
+        <span class="checkmark"><img src="img/check.png" alt=""></span>
+        <h2>Diet</h2>
+      </div>
+ 
+      <div class="image-item" onclick="toggleCheck(this)">
+        <img src="img/weight loss.png" alt="Image 1">
+        <span class="checkmark"><img src="img/check.png" alt=""></span>
+        <h2>Weight Loss</h2>
+
+      </div>
+
+      <div class="image-item" onclick="toggleCheck(this)">
+        <img src="img/cal.png" alt="Image 1">
+        <span class="checkmark"><img src="img/check.png" alt=""></span>
+        <h2>Count Calories </h2>
+      </div>
+
+      <div class="image-item" onclick="toggleCheck(this)">
+        <img src="img/home workout.png" alt="Image 1">
+        <span class="checkmark"><img src="img/check.png" alt=""></span>
+        <h2>Home Workout</h2>
+      </div>
+
+      <div class="image-item" onclick="toggleCheck(this)">
+        <img src="img/coach.png" alt="Image 1">
+        <span class="checkmark"><img src="img/check.png" alt=""></span>
+        <h2>Coach Guidance</h2>
+      </div>
+
+    </div>
+
+    
+  </div>
+  <div class="next-button">
+    <button onclick="goToNext()">Next</button>
+  </div>
+
+
+
+
+
+
+<!-- _____________________________________JS______________________________________ -->
+
+
+
+
+
+  <script >
+
+
+function toggleCheck(element) {
+  element.classList.toggle('selected');
+}
+
+function goToNext() {
+  const selectedImages = document.querySelectorAll('.image-item.selected img');
+  if (selectedImages.length > 0) {
+    const selectedAltTexts = Array.from(selectedImages).map(img => img.getAttribute('alt'));
+    console.log('Next page action with selected images:');
+    selectedAltTexts.forEach(altText => console.log(altText));
+    // Perform actions based on the array of selected alt texts.
+    window.location.href = 'user-info-User-Details2.html';
+  } else {
+    console.log('Please select at least one image');
+    // Handle if no image is selected.
+  }
+}
+
+  </script>
+
+
+
+</body>
+</html>

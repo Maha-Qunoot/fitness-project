@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="header">
+    <div class="logo">
+      <a href="index.html"><img src="img/icon.png" alt=""></a>
+    </div>
+    <nav class="nav-link" id="NavLinks">
+      <img src="img/cancel-icon.png" alt="cancel icon" class="icon" id="cancelIcon" onclick="hideMenu()">
+      <ul>
+        <li><a href="recommandation-plan.html">Recommand Plan</a></li>
+        <li><a href="workout.html">Workout</a></li>
+        <li><a href="session.html">Session</a></li>
+        <li><a href="nutritionist-recipe.html">Nutritionist Recipes</a></li>
+        <li><a href="track-daily.html">Daily Track</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="login.html" id="logIn">login</a></li>
+      </ul>
+    </nav>
+    <img src="img/menu icon.png" alt="hamburger menu" class="icon" onclick="toggleMenu()">
+  </div>
+
+      <div class="session-heading">
+        <h1>Book your Session</h1>
+        <p>Strength&Cardio</p>
+      </div>
+
+      <div class="filter">
+        <button id="sessionButton" onclick="filterSession()">Session</button>
+        <div class="verticalLine"></div>
+        <button id="bookedButton" onclick="filterBooked()">Booked</button>
+      </div>
+      
+
+      <div class="all-sessions">
+        <div class="session">
+            <div class="session-left">
+                <img src="img/session-elevate-your-fitness.png" alt="" onclick="SessionElevateYourFitness()">
+            </div>
+            <div class="session-right">
+                <h2>Elevate Your Fitness: Strength & Conditioning Focus</h2>
+                <hr>
+                <p>Date: March 10, 2023</p>
+                <p>Duration: 60 minutes</p>
+                <h4>Coach Emily Parker</h4>
+            </div>
+        </div>
+
+        <div class="session">
+            <div class="session-left">
+                <img src="img/session-optimizing-performance.png" alt="" onclick="SessionOptimizingPerformance()"> 
+            </div>
+            <div class="session-right">
+                <h2>Optimizing Performance: Maximize Your Potential</h2>
+                <hr>
+                <p>Date: February 15, 2023</p>
+                <p>Duration: 60 minutes</p>
+                <h4>Coach Evelyn Summers</h4>
+            </div>
+            </div>
+        </div>
+
+        <div class="session">
+            <div class="session-left">
+                <img src="img/session-peak-performance.png" alt="" onclick="SessionPeakPerformance()">
+            </div>
+            <div class="session-right">
+                <h2>Peak Performance: Mind & Body Integration</h2>
+                <hr>
+                <p>Date: April 20, 2023</p>
+                <p>Duration: 60 minutes</p>
+                <h4>Coach Taylor Clarke</h4>
+            </div>
+        </div>
+   </div>
+  </div>
+   <!-- -----------------------------------------FOOTER------------------------------ -->
+   <footer>
+    <div class="footer-links">
+  
+        <div class="link-title">
+            <h4>Services</h4>
+            <hr>
+            <p>Workout Plan</p><br>
+            <p>Blogs</p><br>
+            <p>Session</p><br>
+            <p>Daily track</p><br>
+            <p>Nutrition Plan</p><br>
+        </div>
+  
+        <div class="link-title">
+            <h4>Company</h4>
+            <hr>
+            <p>About Us</p><br>
+            <p>Contact Us</p><br>
+            <p>Terms of Use</p><br>
+            <p>Privacy Policy</p><br>
+        </div> 
+        <div class="link-title">
+           <h4>Get the app</h4>
+           <!-- <div class="icons"> -->
+          <i class="fa-brands fa-square-facebook"></i>
+          <i class="fa-brands fa-linkedin"></i>  
+          <i class="fa-brands fa-square-instagram"></i>
+          <i class="fa-brands fa-square-twitter"></i>  
+        <!-- </div>    -->
+      </div>
+  </div>
+  
+      
+    
+  <hr>
+  <p> © 2023 Wellness Edge. All Rights Reserved.</p>
+  </footer>  
+  
+  <script>
+    function filterSession() {
+  document.getElementById('sessionButton').classList.add('active');
+  document.getElementById('bookedButton').classList.remove('active');
+  // Add logic for filtering session
+}
+
+function filterBooked() {
+  document.getElementById('bookedButton').classList.add('active');
+  document.getElementById('sessionButton').classList.remove('active');
+  // Add logic for filtering booked
+}
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

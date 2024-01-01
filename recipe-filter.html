@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <a href="nutritionist-recipe.html"><img src="img/arrow_back.png" alt="Previous Page"></a>
+        <div class="Preference">
+             <h1>Filter</h1>     
+        </div>
+          <img src="img/filter-image.png" alt="">
+      </div> 
+
+      <div class="dietary">
+        <h1>Dietary Preference</h1>
+        <div class="diet-button">
+            <button onclick="toggleActive(this)">Vegetarian</button>
+            <button onclick="toggleActive(this)">Vegan</button>
+            <button onclick="toggleActive(this)">Pescetarian</button>
+            <button onclick="toggleActive(this)">None</button>
+        </div>
+      </div>
+
+      <div class="dietary">
+        <h1>Allergies</h1>
+        <div class="diet-button">
+            <button onclick="toggleActive(this)">Dairy</button>
+            <button onclick="toggleActive(this)">Gluten</button>
+            <button onclick="toggleActive(this)">Eggs</button>
+            <button onclick="toggleActive(this)">Fish</button>
+            <button onclick="toggleActive(this)">Nuts</button>
+        </div>
+      </div>
+
+      <div class="next-page">
+        <button onclick="GoBackToNutitionRecipe()">Done</button>
+      </div>
+      
+      <script src="script.js"></script>
+</body>
+</html>
