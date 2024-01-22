@@ -87,14 +87,9 @@ function toggleCheck(element) {
 function goToNext() {
   const selectedImages = document.querySelectorAll('.image-item.selected img');
   if (selectedImages.length > 0) {
-    const selectedAltTexts = Array.from(selectedImages).map(img => img.getAttribute('alt'));
-    console.log('Next page action with selected images:');
-    selectedAltTexts.forEach(altText => console.log(altText));
-    // Perform actions based on the array of selected alt texts.
     window.location.href = 'user-info-User-Details2.html';
   } else {
     console.log('Please select at least one image');
-    // Handle if no image is selected.
   }
 }
 

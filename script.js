@@ -1,8 +1,4 @@
-// // Toggle menu visibility on button click
-// function toggleMenu(){
-//      var menu = document.querySelector('header');
-//      menu.classList.toggle('show-nav');
-// }
+
 
 // -------------------------click login go to user info page-----------------
 function redirectToPage() {
